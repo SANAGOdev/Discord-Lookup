@@ -1,6 +1,6 @@
 # Discord ID Lookup
 ### 1 : Download [Node.js](https://nodejs.org/en) recommended version.
-### 2 : CLick code button and download the source code.
+### 2 : Click code button and download the source code.
 ### 3 : Open a new terminal in the repository folder and run `npm install`
 ### 4 : Run `node index.js` to start the tool
 ## Preview :
