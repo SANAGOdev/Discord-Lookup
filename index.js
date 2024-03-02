@@ -10,11 +10,11 @@ function display_gui() {
 
 function display_datas(datas) {     
     console.log(`
-        Username : ${datas.username}\n
-        Display name : ${datas.global_name}\n
-        Profil picture url : ${pfp_url}${datas.id}/${datas.avatar}\n
-        Discord decorations : ${datas.avatar_decoration_data}\n
-        Banner color : ${datas.banner_color}
+        \x1b[32mUsername : \x1b[0m${datas.username}\n
+        \x1b[32mDisplay name : \x1b[0m${datas.global_name}\n
+        \x1b[32mProfil picture url : \x1b[0m${pfp_url}${datas.id}/${datas.avatar}\n
+        \x1b[32mDiscord decorations : \x1b[0m${datas.avatar_decoration_data}\n
+        \x1b[32mBanner color : \x1b[0m${datas.banner_color}\n
     `);
 }
 
