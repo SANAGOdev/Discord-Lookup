@@ -3,5 +3,8 @@
 ### 2 : Click code button and download the source code.
 ### 3 : Open a new terminal in the repository folder and run `npm install`
 ### 4 : Run `node index.js` to start the tool
+
+### /!\ Important information : you need to make a discord bot and copy his token, you can create one [here](https://discord.com/developers/applications)
+
 ## Preview :
 <img src="https://media.discordapp.net/attachments/1202825879361822741/1213581092708155392/screen.png?ex=65f5fe77&is=65e38977&hm=cf02a0670bf92a5a01af5ca90cf63d3897799e012604b5f708854c29b1212126&=&format=webp&quality=lossless&width=1245&height=676">
