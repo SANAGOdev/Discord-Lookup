@@ -9,13 +9,47 @@ function display_gui() {
 }
 
 function display_datas(datas) {     
-    console.log(`
+    if (datas.premium_type == 0) {
+        console.log(`
         \x1b[32mUsername : \x1b[0m${datas.username}\n
         \x1b[32mDisplay name : \x1b[0m${datas.global_name}\n
         \x1b[32mProfil picture url : \x1b[0m${pfp_url}${datas.id}/${datas.avatar}\n
         \x1b[32mDiscord decorations : \x1b[0m${datas.avatar_decoration_data}\n
         \x1b[32mBanner color : \x1b[0m${datas.banner_color}\n
-    `);
+        \x1b[32mNitro Type : \x1b[0mnull\n
+        \x1b[32mPublic flags : \x1b[0m${datas.public_flags}\n
+        `);
+    } else if (datas.premium_type == 1) {
+        console.log(`
+        \x1b[32mUsername : \x1b[0m${datas.username}\n
+        \x1b[32mDisplay name : \x1b[0m${datas.global_name}\n
+        \x1b[32mProfil picture url : \x1b[0m${pfp_url}${datas.id}/${datas.avatar}\n
+        \x1b[32mDiscord decorations : \x1b[0m${datas.avatar_decoration_data}\n
+        \x1b[32mBanner color : \x1b[0m${datas.banner_color}\n
+        \x1b[32mNitro type : \x1b[0mClassic\n
+        \x1b[32mPublic flags : \x1b[0m${datas.public_flags}\n
+        `);
+    } else if (datas.premium_type == 2) {
+        console.log(`
+        \x1b[32mUsername : \x1b[0m${datas.username}\n
+        \x1b[32mDisplay name : \x1b[0m${datas.global_name}\n
+        \x1b[32mProfil picture url : \x1b[0m${pfp_url}${datas.id}/${datas.avatar}\n
+        \x1b[32mDiscord decorations : \x1b[0m${datas.avatar_decoration_data}\n
+        \x1b[32mBanner color : \x1b[0m${datas.banner_color}\n
+        \x1b[32mNitro type : \x1b[0mBoost\n
+        \x1b[32mPublic flags : \x1b[0m${datas.public_flags}\n
+        `);
+    } else {
+        console.log(`
+        \x1b[32mUsername : \x1b[0m${datas.username}\n
+        \x1b[32mDisplay name : \x1b[0m${datas.global_name}\n
+        \x1b[32mProfil picture url : \x1b[0m${pfp_url}${datas.id}/${datas.avatar}\n
+        \x1b[32mDiscord decorations : \x1b[0m${datas.avatar_decoration_data}\n
+        \x1b[32mBanner color : \x1b[0m${datas.banner_color}\n
+        \x1b[32mNitro type : \x1b[0mBasic\n
+        \x1b[32mPublic flags : \x1b[0m${datas.public_flags}\n
+        `);
+    }
 }
 
 async function main_loop() {
