@@ -8,13 +8,32 @@ function display_gui() {
     console.log("\n\t\t\t\t\t\x1b[35mBy SANAGO\x1b[0m\t\x1b[32mdiscord.gg/linuxfr\x1b[0m\n\n\n");
 }
 
-function display_datas(datas) {     
+function get_nitro_type(datas) {
+    switch (datas.premium_type) {
+        case 0:
+            return "No Nitro";
+        case 1:
+            return "Classic";
+        case 2:
+            return "Boost";
+        default:
+            return "Basic";
+    }
+}
+
+function display_datas(datas) {
+    let have_decoration = "Yes";
+
+    if (!datas.avatar_decoration_data)
+        have_decoration = "No"
     console.log(`
         \x1b[32mUsername : \x1b[0m${datas.username}\n
         \x1b[32mDisplay name : \x1b[0m${datas.global_name}\n
         \x1b[32mProfil picture url : \x1b[0m${pfp_url}${datas.id}/${datas.avatar}\n
-        \x1b[32mDiscord decorations : \x1b[0m${datas.avatar_decoration_data}\n
+        \x1b[32mDiscord decorations : \x1b[0m${have_decoration}\n
+        \x1b[32mNitro Type : \x1b[0m${get_nitro_type(datas)}\n
         \x1b[32mBanner color : \x1b[0m${datas.banner_color}\n
+        \x1b[32mPublic flags : \x1b[0m${datas.public_flags}\n
     `);
 }
 
